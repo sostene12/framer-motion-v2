@@ -2,6 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+const containerVariants = {
+  initial: {
+    x: "100vw",
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      delay: 0.4,
+    },
+  },
+};
+
 const Toppings = ({ addTopping, pizza }) => {
   let toppings = [
     "mushrooms",
@@ -15,9 +30,9 @@ const Toppings = ({ addTopping, pizza }) => {
   return (
     <motion.div
       className="toppings container"
-      initial={{ x: "-100vw" }}
-      animate={{ x: 0 }}
-      transition={{ type: "spring", stiffness: 120, delay: 0.2 }}
+      variants={containerVariants}
+      initial="initial"
+      animate="animate"
     >
       <h3>Step 2: Choose Toppings</h3>
       <ul>
