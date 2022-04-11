@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/framer-motion-v2/precache-manifest.8a118621e7d8ffd61ae5a62b837bc4b2.js"
+  "/framer-motion-v2/precache-manifest.a805cd7718a573250984a046cc5fbea8.js"
 );
 
 self.addEventListener('message', (event) => {
